@@ -88,10 +88,10 @@ horario_vali <- df %>%
   filter(diferenca > 8*60*60)
 
 df_gg <- df %>%
-  filter(horario < horario_vali$anterior[1] |
-           horario > horario_vali$horario[1]) %>%
-  filter(horario < horario_vali$anterior[2] |
-           horario > horario_vali$horario[2])
+  group_by(horario) %>%
+  filter(all(!(horario > horario_vali$anterior &
+                 horario < horario_vali$horario))) %>%
+  ungroup()
 
 ## Duvida: Como transformaria os "filter()" em laço "for(){}" ?
 ## pois, se tiver "n" intevalos de 8 horas, fica impossibilitado de
@@ -109,11 +109,11 @@ df_gg <- df %>%
 ###   mutate(diferenca = horario - anterior) %>%
 ###   filter(diferenca > 8*60*60) -> horario_validos
 
-### tabelao %>%
-###   filter(horario < horario_validos$anterior[1] |
-###            horario > horario_validos$horario[1]) %>%
-###   filter(horario < horario_validos$anterior[2] |
-###            horario > horario_validos$horario[2]) -> tabelao_bom
+### tabelao_bom <- tabelao %>%
+### group_by(horario) %>%
+###   filter(all(!(horario > horario_validos$anterior &
+###                  horario < horario_validos$horario))) %>%
+###   ungroup()
 
 # Parte 5
 
