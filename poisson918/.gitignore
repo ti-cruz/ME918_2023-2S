@@ -1,4 +1,4 @@
-.Rproj.user
-.Rhistory
-.Rdata
-.Rd
+*.Rproj.user
+*.Rhistory
+*.Rdata
+*.Rd
