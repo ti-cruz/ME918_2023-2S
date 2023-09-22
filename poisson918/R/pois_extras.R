@@ -1,4 +1,3 @@
-#' @importFrom magrittr '%>%'
 #' @importFrom purrr cross
 #' @export
 
