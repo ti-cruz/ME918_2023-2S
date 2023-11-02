@@ -1,0 +1,11 @@
+Package: revisao206333
+Type: Package
+Title: Revisão da primera prova de ME918
+Version: 0.1.0
+Author: Who wrote it
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: Nesse pacote tem o objetivo de revisar as materias que foram abordadas nos projetos `AtividadeME918` e `ati02_ME918`, como também no pacotes "poisson918". Desses foram abordados os temas seguintes temas,• Manipulação de Lista (utilizando `purrr`). • • Criação de projetos e pacotes.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
